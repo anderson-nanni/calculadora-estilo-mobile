@@ -1,0 +1,106 @@
+/*
+body {
+    font-size: 25pt;
+    margin: 0;
+    padding: 0;
+}
+
+.linha1 {
+    display: flex;
+}
+.linha2 {
+    display: flex;
+}
+.linha3 {
+    display: flex;
+}
+.linha4 {
+    display: flex;
+}
+.linha5 {
+    display: flex;
+}
+.calculadora {
+    width: 50%;
+
+}
+
+#limpaTudo,
+#limpaUltNum,
+#porcent,
+#divisao,
+#multi,
+#sub,
+#soma,
+#virgula,
+#calc,
+.numeros {
+    padding: 5%;
+}
+*/
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(to right, #808080, #4F4F4F);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calculadora {
+    position:fixed;
+    top: 20%;
+    left: 50%;
+    width: 520px;
+    height: 800px;
+    margin-top: -9em;
+    margin-left: -17em;
+}
+
+.numeric {
+    width: 125px;
+    height: 125px;
+    display: inline-block;
+    background: #E0FFFF;
+    color: #969ea5;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle !important;
+    margin-left: -5px;
+    padding-top: 35px;
+    cursor: pointer;
+}
+
+.numeric:active {
+    background: #B0E0E6;
+    color: #191a1c;
+}
+
+.zero {
+    width: 250px;
+}
+
+.action {
+    background: #242529;
+}
+
+.result {
+    background: #7FFFD4;
+}
+.result:active {
+    background: none;
+}
+
+.visor {
+    width: 500px;
+    height: 220px;
+    margin-left: -5px;
+    background: #f6f7fa;
+}
+
+.total {
+    color: #242529;
+    width: 500px;
+    font-size: 70px;
+    text-align: right;
+    padding-right: 10px;
+}
