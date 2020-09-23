@@ -9,29 +9,28 @@
 <body>
     <div class="calculadora">
         <div class="visor">
-            <div id="total" class="total" hidden>
-
-            </div>
+            <div id="acc" class="acc"></div>
+            <div id="total" class="total" hidden></div>
         </div>
         <div class="numeric action" onclick="apagaTudo()">C</div>
         <div class="numeric action" onclick="limpaUltNum()">CE</div>
-        <div class="numeric action" onclick="porcent()">%</div>
-        <div class="numeric action" onclick="divisao()">/</div>
+        <div class="numeric action" onclick="calc('%')">%</div>
+        <div class="numeric action" onclick="calc('/')">/</div>
         <div class="numeric" onclick="addNum(7)">7</div>
         <div class="numeric" onclick="addNum(8)">8</div>
         <div class="numeric" onclick="addNum(9)">9</div>
-        <div class="numeric action" onclick="multi()">X</div>
+        <div class="numeric action" onclick="calc('x')">X</div>
         <div class="numeric" onclick="addNum(4)">4</div>
         <div class="numeric" onclick="addNum(5)">5</div>
         <div class="numeric" onclick="addNum(6)">6</div>
-        <div class="numeric action" onclick="sub()">-</div>
+        <div class="numeric action" onclick="calc('-')">-</div>
         <div class="numeric" onclick="addNum(1)">1</div>
         <div class="numeric" onclick="addNum(2)">2</div>
         <div class="numeric" onclick="addNum(3)">3</div>
-        <div class="numeric action" onclick="soma()">+</div>
+        <div class="numeric action" onclick="calc('+')">+</div>
         <div class="numeric zero" onclick="addNum(0)">0</div>
         <div class="numeric" onclick="addVirgula()">,</div>
-        <div class="numeric action result" onclick="calc()">=</div>
+        <div class="numeric action result" onclick="result()">=</div>
     </div>
     <script src="main.js"></script>
 </body>
