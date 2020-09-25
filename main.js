@@ -26,6 +26,11 @@ function calc(sinal) {
 
     numeros.push(sinal)
 }
+function addVirgula () {
+    if (!tot.innerHTML.includes(".")) {
+        tot.innerHTML += "."
+    }
+}
 function result() {
     currentAccum = acc.innerHTML
     currentNumber = tot.innerHTML
