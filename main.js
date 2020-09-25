@@ -1,10 +1,10 @@
-const apagaT = document.querySelector('.numeric sinal');
+// const apagaT = document.querySelector('.numeric sinal');
 const tot = document.getElementById('total');
 const acc = document.getElementById('acc');
-const maxNumVisor = 20
+const maxNumVisor = 10
 let numeros = []
 function addNum (n){
-    if (maxNumVisor <= numeros.length) {
+    if (maxNumVisor <= tot.length || maxNumVisor <= acc.length ) {
         return alert("Limite de 10 caracteres do visor foi atingido");
     } else {
         tot.removeAttribute('hidden')
@@ -70,7 +70,6 @@ function ProccessAction() {
 
     tot.innerHTML = total.toString().substring(0, maxNumVisor)
     numeros = []
-
 }
 
 function ProcessSinal(num1, num2, sinal) {
@@ -79,12 +78,26 @@ function ProcessSinal(num1, num2, sinal) {
         case '-': return num1 - num2
         case 'x': return num1 * num2
         case '/': return num1 / num2
+        case '%': return porcent()
     }
 }
 
 
 function apagaTudo () {
     tot.innerHTML = "";
-    tot.innerHTML = "";
+    acc.innerHTML = "";
+    acc.innerHTML = "";
+
     numeros = [];
+}
+
+function limpaUltNum (){
+    tot.innerHTML = "";
+
+}
+
+function porcent () {
+    if (tot.innerHTML != "") {
+        tot.innerHTML = Number((tot).innerHTML) / 100
+    }
 }
