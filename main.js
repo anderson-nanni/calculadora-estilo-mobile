@@ -1,27 +1,28 @@
 // const apagaT = document.querySelector('.numeric sinal');
 const tot = document.getElementById('total');
 const acc = document.getElementById('acc');
-const maxNumVisor = 10
+const maxNumVisor = 11
 let numeros = []
 function addNum (n){
-    if (maxNumVisor <= tot.length || maxNumVisor <= acc.length ) {
-        return alert("Limite de 10 caracteres do visor foi atingido");
+    tot.innerHTML += n
+    if (tot.length >= maxNumVisor || acc.length >= maxNumVisor) {
+        return alert("Limite de 10 caracteres do visor foi atingido")
     } else {
         tot.removeAttribute('hidden')
-        tot.innerHTML += n;
     }
-    console.log(numeros);
+    console.log(tot.value)
+    console.log(numeros)
 }
 
-function calc(sinal) {
-    let currentNumber = tot.innerHTML
+function calc(sinal) { 
+    let currentNumber = tot
 
-    if (currentNumber.length === 0) { return }
+    // if (currentNumber.length === 0) { return }
 
     numeros.push(Number(tot.innerHTML))
 
     acc.removeAttribute("hidden")
-    acc.innerHTML += ` ${tot.innerHTML} ${sinal}`
+    acc.innerHTML += `${tot.innerHTML} ${sinal}`
     tot.innerHTML = ""
 
     numeros.push(sinal)
@@ -42,7 +43,7 @@ function result() {
     if (numeros.length === 0) { return }
 
     numeros.push(Number(tot.innerHTML))
-    acc.innerHTML += ` ${tot.innerHTML} =`
+    tot.innerHTML += ` ${tot.innerHTML} =`
     ProccessAction()
 }
 function ProccessAction() {
@@ -89,17 +90,13 @@ function ProcessSinal(num1, num2, sinal) {
 
 
 function apagaTudo () {
-    tot.innerHTML = "";
-    acc.innerHTML = "";
-    acc.innerHTML = "";
-
-    numeros = [];
+    tot.innerHTML = ""
+    acc.innerHTML = ""
+    numeros = []
 }
 
-function limpaUltNum (){
-    tot.innerHTML = "";
+function limpaUltNum () {tot.innerHTML = ""}
 
-}
 
 function porcent () {
     if (tot.innerHTML != "") {
