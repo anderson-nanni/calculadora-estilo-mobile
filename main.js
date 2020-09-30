@@ -1,6 +1,6 @@
 // const apagaT = document.querySelector('.numeric sinal');
-const tot = document.getElementById('total');
-const acc = document.getElementById('acc');
+let tot = document.getElementById('total');
+let acc = document.getElementById('acc');
 const maxNumVisor = 11
 let numeros = []
 function addNum (n){
@@ -17,7 +17,7 @@ function addNum (n){
 function calc(sinal) { 
     let currentNumber = tot
 
-    // if (currentNumber.length === 0) { return }
+    if (currentNumber.length === 0) { return }
 
     numeros.push(Number(tot.innerHTML))
 
@@ -43,7 +43,7 @@ function result() {
     if (numeros.length === 0) { return }
 
     numeros.push(Number(tot.innerHTML))
-    tot.innerHTML += ` ${tot.innerHTML} =`
+    acc.innerHTML += ` ${tot.innerHTML} =`
     ProccessAction()
 }
 function ProccessAction() {
